@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    app:behavior_peekHeight="200dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/peekView"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:id="@+id/peekRecyclerView"
+            />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/camera_back"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/clickImage"
+            android:layout_below="@+id/peekRecyclerView"
+            android:layout_marginTop="10dp"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_flash_incative"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/peekRecyclerView"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_camera_front"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/peekRecyclerView"
+            android:layout_marginRight="20dp"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/collapsedView"
+        android:background="#fff"
+        android:alpha="0"
+
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/backButton"
+            android:layout_margin="20dp"
+            android:src="@drawable/ic_back"
+            android:layout_alignParentLeft="true"
+
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/selectButton"
+            android:layout_margin="20dp"
+            android:layout_alignParentRight="true"
+
+            />
+
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:layout_width="match_parent"
+              android:layout_below="@+id/backButton"
+              android:layout_height="wrap_content"
+              android:id="@+id/MainRecyclerView"
+
+              />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
